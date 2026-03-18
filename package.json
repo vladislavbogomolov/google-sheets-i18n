@@ -1,0 +1,34 @@
+{
+  "name": "google-sheets-i18n",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CLI package for syncing next-intl style translations with Google Sheets",
+  "license": "MIT",
+  "author": "Vladislav Bogomolov <bogomolov.vlad@gmail.com>",
+  "keywords": [
+    "google-sheets",
+    "i18n",
+    "localization",
+    "translations",
+    "next-intl",
+    "cli"
+  ],
+  "bin": {
+    "google-sheets-i18n": "bin/google-sheets-i18n.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "dependencies": {
+    "google-auth-library": "^10.6.2",
+    "google-spreadsheet": "^4.1.5",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
