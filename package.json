@@ -5,6 +5,14 @@
   "description": "CLI package for syncing next-intl style translations with Google Sheets",
   "license": "MIT",
   "author": "Vladislav Bogomolov <bogomolov.vlad@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladislavbogomolov/google-sheets-i18n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vladislavbogomolov/google-sheets-i18n/issues"
+  },
+  "homepage": "https://github.com/vladislavbogomolov/google-sheets-i18n#readme",
   "keywords": [
     "google-sheets",
     "i18n",
