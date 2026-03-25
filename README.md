@@ -2,6 +2,7 @@
 
 [![Node.js >=18](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 CLI package for syncing `next-intl` style JSON translations with Google Sheets.
 
@@ -58,6 +59,22 @@ With `yarn`:
 ```bash
 yarn add -D google-sheets-i18n
 ```
+
+## Releases
+
+Releases are automated with GitHub Actions and `semantic-release`.
+
+Commits that affect package versions should follow Conventional Commits:
+
+- `fix:` publishes a patch release
+- `feat:` publishes a minor release
+- `BREAKING CHANGE:` or `feat!:` publishes a major release
+
+The release workflow runs on `master` and `main`, publishes to npm, updates `package.json`, and generates `CHANGELOG.md`.
+
+To enable npm publishing, add the `NPM_TOKEN` repository secret in GitHub. `GITHUB_TOKEN` is provided automatically by GitHub Actions.
+
+If you keep the current non-conventional commit history, the first automated release will happen only after the next release-worthy commit such as `feat:` or `fix:`. If you want to align history immediately, create the initial tag manually before enabling the workflow.
 
 ## Quick Start
 

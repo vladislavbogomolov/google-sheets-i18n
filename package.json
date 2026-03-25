@@ -31,10 +31,22 @@
     "bin",
     "src"
   ],
+  "scripts": {
+    "test": "npm run test:syntax && npm run test:cli && npm run test:pack",
+    "test:syntax": "node --check src/index.mjs && node --check bin/google-sheets-i18n.mjs",
+    "test:cli": "node bin/google-sheets-i18n.mjs help",
+    "test:pack": "npm pack --dry-run",
+    "release": "semantic-release"
+  },
   "dependencies": {
     "google-auth-library": "^10.6.2",
     "google-spreadsheet": "^4.1.5",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.0",
+    "semantic-release": "^24.2.7"
   },
   "engines": {
     "node": ">=18"
