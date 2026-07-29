@@ -2,7 +2,7 @@
   "name": "google-sheets-i18n",
   "version": "1.0.0",
   "type": "module",
-  "description": "CLI package for syncing next-intl style translations with Google Sheets",
+  "description": "CLI package for syncing next-intl and react-i18next translations with Google Sheets",
   "license": "MIT",
   "author": "Vladislav Bogomolov <bogomolov.vlad@gmail.com>",
   "repository": {
@@ -19,6 +19,8 @@
     "localization",
     "translations",
     "next-intl",
+    "react-i18next",
+    "i18next",
     "cli"
   ],
   "bin": {
@@ -29,11 +31,13 @@
   },
   "files": [
     "bin",
-    "src"
+    "src",
+    ".env.example"
   ],
   "scripts": {
-    "test": "npm run test:syntax && npm run test:cli && npm run test:pack",
+    "test": "npm run test:syntax && npm run test:unit && npm run test:cli && npm run test:pack",
     "test:syntax": "node --check src/index.mjs && node --check bin/google-sheets-i18n.mjs",
+    "test:unit": "node test/internal.test.mjs",
     "test:cli": "node bin/google-sheets-i18n.mjs help",
     "test:pack": "npm pack --dry-run",
     "release": "semantic-release"
